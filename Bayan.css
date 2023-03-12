@@ -97,4 +97,10 @@ input {
     .bayan:hover .plus {
         opacity: 1;
     }
+    .bayan:hover .message {
+        color: black;
+    }
+    .message {
+        color: blue;
+    }
 }
