@@ -42,19 +42,23 @@ body {
 img {
     display: inline;
     width: 30vw;
-    height: 0;
+    max-height: 0;
     margin-left: 30%;
     transform: scale(0);
     transition: transform 0.5s;
 }
-.card:hover > img {
-    height: 30vh;
+.card:hover > img,
+input:checked ~ img {
+    max-height: 100vh;
     transform: scale(1);
-
 }
-.card:hover .plus {
+.card:hover .plus,
+input:checked ~ label .plus {
     transform: rotate(45deg);
 }
 .bayan:hover .plus {
     opacity: 1;
+}
+input {
+    display: none;
 }
