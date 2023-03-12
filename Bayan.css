@@ -5,17 +5,19 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .bayan {
     flex-direction: column;
     justify-content: center;
-    width: 80vw;
+    width: 100vw;
     background-color: rgb(239, 246, 175);
     cursor: pointer;
 }
-.bayanCss {
-    font-size: 3rem;
-    margin-left: 5%;
+.title {
+    font-size: 1.5rem;
+    text-align: center;
 }
 .card {
     display: flex;
@@ -27,38 +29,72 @@ body {
     border-color: bisque;
     transition: all 0.5s;
 }
-.conteiner {
+.container {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
-    font-weight: 900;
-}
-.message{
-    
+    font-size: 1rem;
 }
 .plus {
-    opacity: 0;
+    opacity: 1;
 }
 img {
-    display: inline;
-    width: 30vw;
+    display: block;
+    align-self: center;
+    width: 70vw;
     max-height: 0;
-    margin-left: 30%;
     transform: scale(0);
     transition: transform 0.5s;
 }
-.card:hover > img,
 input:checked ~ img {
     max-height: 100vh;
     transform: scale(1);
 }
-.card:hover .plus,
 input:checked ~ label .plus {
     transform: rotate(45deg);
 }
-.bayan:hover .plus {
-    opacity: 1;
-}
 input {
     display: none;
+}
+@media (min-width: 321px) {
+    .bayan {
+        width: 80vw;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .container {
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+    img {
+        width: 50vw;
+    }
+}
+@media (min-width: 821px) {
+    .bayan {
+        width: 60vw;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .container {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    img {
+        width: 30vw;
+    }
+    .plus {
+        opacity: 0;
+    }
+    .card:hover > img {
+        max-height: 100vh;
+        transform: scale(1);
+    }
+    .card:hover .plus {
+        transform: rotate(45deg);
+    }
+    .bayan:hover .plus {
+        opacity: 1;
+    }
 }
